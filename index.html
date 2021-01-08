@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        (function () {
+            if (window.screen.width >= 768) {
+                let body = document.querySelector('body')
+                body.style.background = 'none'
+                body.style.backgroundColor = 'black'
+
+                let video = document.createElement('video')
+                video.autoplay = true
+                video.muted = true
+                video.loop = true
+                video.id = 'myVideo'
+                video.innerHTML = '<source src="assets/background-video.mp4" type="video/mp4">'
+                document.body.append(video)
+            }
+        })();
+    </script>
+    <div class='container'>
+        <div class='logo'>
+            <img src='assets/logo.png'>
+        </div>
+        <div class='content'>
+            <h1 class='content__header'>Чат боти для Cofka ink</h1>
+            <p class='content__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil maxime corrupti
+                praesentium itaque ex quae quam eligendi, vero dicta voluptatibus</p>
+        </div>
+        <div class='share'>
+            <div class='share_buttons'>
+                <div class='share_buttons__item'>
+                    <div class='share_buttons__item__logo'>
+                        <img src='assets/telegram-logo.png'>
+                    </div>
+                    <a href='#' class='share_buttons__item__text'>Відкрити у Telegram</a>
+                </div>
+                <div class='share_buttons__item'>
+                    <div class='share_buttons__item__logo'>
+                        <img src='assets/viber-logo.png'>
+                    </div>
+                    <a href='#' class='share_buttons__item__text'>Відкрити у Viber</a>
+                </div>
+            </div>
+            <div class='share_buttons__info'>або проскануйте qr-код</div>
+            <div class='share_qr'>
+                <div class="share_qr__item">
+                    <div class="share_qr__item__logo">
+                        <img src='assets/telegram-qr.png'>
+                    </div>
+                    <div class='share_qr__item__text'>Telegram</div>
+                </div>
+                <div class="share_qr__item">
+                    <div class="share_qr__item__logo">
+                        <img src='assets/viber-qr.png'>
+                    </div>
+                    <div class='share_qr__item__text'>Viber</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
